@@ -5,6 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Страничка для Аришки</title>
     <link href="//cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes rotate {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        <!--proverit dashed-->
+        .load {
+            width: 100px;
+            height: 100px;
+            margin: 110px auto 0;
+            border: solid 10px dashed#8822aa;
+            border-radius: 50%;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            -webkit-transition: all 0.5s ease-in;
+            -webkit-animation-name: rotate;
+            -webkit-animation-duration: 1.0s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            transition: all 0.5s ease-in;
+            animation-name: rotate;
+            animation-duration: 1.0s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+    </style>
+
 </head>
 <body class="flex flex-col min-h-screen bg-blue-50 font-sans antialised">
     <!--Строка для Арины-->
@@ -13,7 +56,8 @@
             <h1 class="text-4xl font-bold"> САЙТ ДЛЯ ОПИСАНИЯ ВИДЕО ЧЕРЕЗ НЕЙРОСЕТЬ </h1>
         </div>
         <div>
-            <a class="text-2xl hover:underline"></a> И че тут делать? </a>
+            <a href="#" class="text-2xl hover:underline"> Зарегистрироваться </a>
+            <a href="#" class="text-2xl hover:underline"> Войти </a>
         </div>
     </nav>
 
@@ -43,7 +87,7 @@
             </div>
             
             <!--Секция с загрузочным колесом-->
-            <div id="loading-circle" class="load">
+            <div style="display:none;" id="loading-circle" class="load">
 
             </div>
 
